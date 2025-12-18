@@ -1,0 +1,10 @@
+:root {
+    --hintergrund-color: #F5EDE0;
+    --button-color: #E2C08D;
+    --button-hover-color: #d3b383;
+    --schrift-color: #3D3D3D;
+    --second-hintergrund-color: #EEE3D0;
+    --font-main: "Inter", sans-serif;
+    /* --spacing-sides-section: 101px; */
+    /* с bootstrap не используется, ибо bootstrap сам управляет крайними отступами с помощью container */
+}
