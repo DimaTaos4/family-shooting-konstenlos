@@ -1,0 +1,339 @@
+/**
+ * ============================================
+ * BASE STYLES - 100% Bootstrap Approach
+ * ============================================
+ *
+ * Подход: Минимум custom CSS, максимум Bootstrap utilities
+ * - Только CSS переменные для цветов
+ * - Только Bootstrap theme overrides
+ * - Всё остальное через Bootstrap utilities!
+ */
+
+/* ========================================
+   CSS VARIABLES - Brand Colors Only
+   ======================================== */
+
+:root {
+    /* Brand Colors */
+    --brand-primary: #E2C08D;
+    --brand-secondary: #EEE3D0;
+    --brand-dark: #3D3D3D;
+    --brand-light: #F5EDE0;
+    --brand-white: #FFFFFF;
+    --brand-gray: #7F7F7F;
+    --brand-light-gray: #F8F8F8;
+    --brand-border: #3D3D3D;
+}
+
+/* ========================================
+   BASE RESET
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--brand-light);
+    color: var(--brand-dark);
+    font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   BOOTSTRAP THEME OVERRIDES
+   ======================================== */
+
+/* Primary Button Theme */
+.btn-primary {
+    --bs-btn-bg: var(--brand-primary);
+    --bs-btn-border-color: var(--brand-primary);
+    --bs-btn-hover-bg: #d4b582;
+    --bs-btn-hover-border-color: #d4b582;
+    --bs-btn-active-bg: #c9a876;
+    --bs-btn-active-border-color: #c9a876;
+    --bs-btn-color: var(--brand-white);
+    --bs-btn-hover-color: var(--brand-white);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Outline Dark Button Theme */
+.btn-outline-dark {
+    --bs-btn-color: var(--brand-dark);
+    --bs-btn-border-color: var(--brand-border);
+    --bs-btn-hover-bg: var(--brand-dark);
+    --bs-btn-hover-border-color: var(--brand-dark);
+    --bs-btn-hover-color: var(--brand-white);
+    --bs-btn-active-bg: var(--brand-dark);
+    --bs-btn-active-border-color: var(--brand-dark);
+    border-width: 2px;
+}
+
+/* Navbar Brand Hover */
+.navbar-brand:hover {
+    color: var(--brand-primary) !important;
+}
+
+/* ========================================
+   BOOTSTRAP UTILITY EXTENSIONS
+   ======================================== */
+
+/* Background Color Utilities */
+.bg-brand-primary {
+    background: var(--brand-primary) !important;
+}
+
+.bg-brand-secondary {
+    background: var(--brand-secondary) !important;
+}
+
+.bg-brand-light {
+    background: var(--brand-light) !important;
+}
+
+.bg-brand-light-gray {
+    background: var(--brand-light-gray) !important;
+}
+
+/* Text Color Utilities */
+.text-brand-primary {
+    color: var(--brand-primary) !important;
+}
+
+.text-brand-dark {
+    color: var(--brand-dark) !important;
+}
+
+/* ========================================
+   REUSABLE COMPONENT UTILITIES
+   (For Landing Page Constructor)
+   ======================================== */
+
+/* Border Line Utilities */
+.border-line {
+    border: 0;
+    height: 1px;
+    background: var(--brand-dark);
+    margin: 1rem 0;
+}
+
+.border-line-sm {
+    border: 0;
+    height: 1px;
+    background: var(--brand-dark);
+    margin: 0.5rem 0;
+}
+
+/* Icon Circles (for features, steps, etc.) */
+.icon-circle-lg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-md {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Arrow Link with Transition */
+.arrow-link {
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--brand-dark);
+}
+
+.arrow-link:hover {
+    color: var(--brand-primary);
+}
+
+.arrow-icon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.arrow-link:hover .arrow-icon {
+    transform: translateX(4px);
+}
+
+/* Object Fit Utilities */
+.object-cover {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Max Width Utilities (for constructor flexibility) */
+.mw-200 {
+    max-width: 200px !important;
+}
+
+.mw-300 {
+    max-width: 300px !important;
+}
+
+.mw-400 {
+    max-width: 400px !important;
+}
+
+.mw-428 {
+    max-width: 428px !important;
+}
+
+.mw-500 {
+    max-width: 500px !important;
+}
+
+.mw-600 {
+    max-width: 600px !important;
+}
+
+.mw-700 {
+    max-width: 700px !important;
+}
+
+.mw-800 {
+    max-width: 800px !important;
+}
+
+.mw-900 {
+    max-width: 900px !important;
+}
+
+/* Fixed Heights (for consistent card/image heights) */
+.h-280 {
+    height: 280px !important;
+}
+
+.h-290 {
+    height: 290px !important;
+}
+
+.h-300 {
+    height: 300px !important;
+}
+
+.h-350 {
+    height: 350px !important;
+}
+
+.h-394 {
+    height: 394px !important;
+}
+
+.h-400 {
+    height: 400px !important;
+}
+
+.h-440 {
+    height: 440px !important;
+}
+
+.h-500 {
+    height: 500px !important;
+}
+
+/* Min Height Utilities */
+.min-h-300 {
+    min-height: 300px !important;
+}
+
+.min-h-400 {
+    min-height: 400px !important;
+}
+
+.min-h-500 {
+    min-height: 500px !important;
+}
+
+.min-h-656 {
+    min-height: 656px !important;
+}
+
+/* Image Container with Fixed Dimensions */
+.img-fixed-container {
+    overflow: hidden;
+    display: block;
+}
+
+/* Text Shadow for Overlays */
+.text-shadow-dark {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text-shadow-light {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Image Aspect Ratios */
+.aspect-square {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.aspect-video {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.aspect-portrait {
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+}
+
+/* ========================================
+   CONSTRUCTOR HELPER CLASSES
+   ======================================== */
+
+/* Section Spacing (standardized for all sections) */
+.section-py {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section-py-lg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-py-sm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Container Padding (consistent across sections) */
+.container-px {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.container-px-lg {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+@media (min-width: 992px) {
+    .container-px {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

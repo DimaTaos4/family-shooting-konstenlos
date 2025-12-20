@@ -1,0 +1,95 @@
+/**
+ * ============================================
+ * FAQ ACCORDION SECTION
+ * ============================================
+ *
+ * Description:
+ * Custom accordion component for FAQ section.
+ * Allows multiple questions to be open simultaneously.
+ * Smooth expand/collapse animations.
+ *
+ * Dependencies:
+ * - Bootstrap 5.3.3 (layout utilities: d-flex, justify-content-between, etc.)
+ * - CSS variables from base-styles.css (--brand-primary, --brand-border, --brand-dark)
+ *
+ * HTML Structure:
+ * <div class="faq-accordion">
+ *   <div class="faq-item">
+ *     <div class="faq-question" role="button" tabindex="0">
+ *       <span>Question text</span>
+ *       <span class="faq-icon">+</span>
+ *     </div>
+ *     <div class="faq-answer">
+ *       <p>Answer text</p>
+ *     </div>
+ *   </div>
+ * </div>
+ *
+ * JavaScript:
+ * Requires main.js for toggle functionality
+ *
+ * BEM Naming:
+ * .faq-accordion          (block)
+ * .faq-item               (element)
+ * .faq-question           (element)
+ * .faq-answer             (element)
+ * .faq-icon               (element)
+ * .faq-item.active        (modifier)
+ */
+
+/* FAQ Container */
+.faq-accordion {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* FAQ Item */
+.faq-item {
+    border-bottom: 1px solid var(--brand-border);
+    padding: 1.5rem 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+/* FAQ Question (clickable) */
+.faq-question {
+    cursor: pointer;
+    user-select: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: var(--brand-primary);
+}
+
+.faq-question:focus {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 4px;
+}
+
+/* FAQ Icon (+ / -) */
+.faq-icon {
+    color: var(--brand-dark);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+}
+
+.faq-item.active .faq-icon {
+    color: var(--brand-primary);
+}
+
+/* FAQ Answer (expandable) */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+}

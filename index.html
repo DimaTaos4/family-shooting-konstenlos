@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Лендинг</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/variables.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- ========================================
+       CUSTOM STYLES
+       ======================================== -->
+    <!-- Global Styles (colors, buttons, navbar) -->
+    <link rel="stylesheet" href="styles/base-styles.css" />
+
+    <!-- Section Modules (only used sections) -->
+    <link rel="stylesheet" href="styles/sections/gallery-swiper.css" />
+    <link rel="stylesheet" href="styles/sections/stories-slider.css" />
+    <link rel="stylesheet" href="styles/sections/faq-accordion.css" />
+    <link rel="stylesheet" href="styles/sections/creative-showcase.css" />
 </head>
 
 <body>
@@ -71,7 +88,7 @@
 
                     <button class="section-2-button">
                         Kostenloses Fotoshooting sichren
-                        <img src="images/button-line.svg" class="arrow-img" alt="">
+                        <img src="icons/button-line.svg" class="arrow-img" alt="">
                     </button>
                 </div>
             </div>
@@ -103,7 +120,7 @@
                     <div class="section-3-button-wrapper">
                         <button class="section-3-button">
                             Hier geht's zu den Gutscheinen
-                            <img src="images/button-line.svg" class="arrow-img" alt="">
+                            <img src="icons/button-line.svg" class="arrow-img" alt="">
                         </button>
                     </div>
 
@@ -121,7 +138,328 @@
         </div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SECTION 4 (Photos) -->
+
+    <section class="py-5 bg-brand-secondary">
+        <div class="container-fluid px-3 px-lg-5">
+            <!-- Swiper -->
+            <div class="swiper gallerySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 - Family Photo -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&h=800&fit=crop&q=80"
+              alt="Happy family portrait outdoors"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                    <!-- Slide 2 - Children Playing -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=800&fit=crop&q=80"
+              alt="Children playing together"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                    <!-- Slide 3 - Mother and Child -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=800&fit=crop&q=80"
+              alt="Mother with child portrait"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                    <!-- Slide 4 - Family Outdoor -->
+                    <div class="swiper-slide">
+                        <img
+      src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=800&h=800&fit=crop&q=80"
+              alt="Family outdoor photoshoot"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                    <!-- Slide 5 - Portrait -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&q=80"
+              alt="Beautiful portrait photography"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                    <!-- Slide 6 - Kids Portrait -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=800&fit=crop&crop=faces&q=80"
+              alt="Children portrait"
+              class="gallery-image"
+              loading="lazy"
+            />
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION #6: STORIES SLIDER  -->
+
+    <section class="py-5 bg-brand-light">
+        <div class="container px-3 px-lg-5">
+
+            <!-- Stories Swiper -->
+            <div class="swiper storiesSwiper">
+                <!-- Progress bars (like Instagram Stories) -->
+                <div class="stories-progress-container">
+                    <div class="story-progress-bar"></div>
+                    <div class="story-progress-bar"></div>
+                    <div class="story-progress-bar"></div>
+                    <div class="story-progress-bar"></div>
+                    <div class="story-progress-bar"></div>
+                </div>
+
+                <div class="swiper-wrapper">
+                    <!-- Story 1 -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&h=800&fit=crop&q=80"
+              alt="Family moments story 1"
+              class="story-image"
+            />
+                    </div>
+                    <!-- Story 2 -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=800&fit=crop&q=80"
+              alt="Family moments story 2"
+              class="story-image"
+            />
+                    </div>
+                    <!-- Story 3 -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&h=800&fit=crop&q=80"
+              alt="Portrait story 3"
+              class="story-image"
+            />
+                    </div>
+                    <!-- Story 4 -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=800&fit=crop&q=80"
+              alt="Children story 4"
+              class="story-image"
+            />
+                    </div>
+                    <!-- Story 5 -->
+                    <div class="swiper-slide">
+                        <img
+              src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=800&h=800&fit=crop&q=80"
+              alt="Family outdoor story 5"
+              class="story-image"
+            />
+                    </div>
+                </div>
+
+                <!-- Clickable navigation areas -->
+                <div class="story-nav-prev"></div>
+                <div class="story-nav-next"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION #7: FEATURES (3 COLUMNS) -->
+    <section class="py-5 bg-brand-light">
+        <div class="container px-3 px-lg-5">
+            <div class="row g-4">
+                <!-- Feature 1 -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="icon-circle-lg mx-auto mb-3 bg-brand-light-gray">
+                        <i class="fa-regular fa-clock fs-1"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Viel Zeit & Raum</h3>
+                    <hr class="border-line mw-200 mx-auto">
+                    <p class="fs-6">für Momente für dich und deine Familie</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="icon-circle-lg mx-auto mb-3 bg-brand-light-gray">
+                        <i class="fa-solid fa-camera fs-1"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Professionelle Fotografin</h3>
+                    <hr class="border-line mw-200 mx-auto">
+                    <p class="fs-6">aus Leidenschaft und Professionalität</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="icon-circle-lg mx-auto mb-3 bg-brand-light-gray">
+                        <i class="fa-solid fa-star fs-1"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Hohe Qualität</h3>
+                    <hr class="border-line mw-200 mx-auto">
+                    <p class="fs-6">der Fotos hautnah erleben</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION #8: PROCESS STEPS (2x2 GRID)-->
+
+    <section class="py-5 bg-brand-secondary">
+        <div class="container px-3 px-lg-5">
+
+            <!-- Heading and CTA Button in one row -->
+            <div class="row align-items-center g-3 mb-5">
+                <div class="col-lg-7 col-md-6">
+                    <h2 class="fs-3 fw-bold mb-0">Wie genau komme ich zum Fotoshooting?</h2>
+                </div>
+                <div class="col-lg-5 col-md-6 text-lg-end">
+                    <a href="#contact" class="btn btn-outline-dark px-5 py-3 fw-bold rounded-0">Deine Fotoshooting-Aktion – jetzt sichern!</a>
+                </div>
+            </div>
+
+            <!-- Steps Grid - 2x2 -->
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="icon-circle-md mb-3 bg-brand-light-gray">
+                        <i class="fa-solid fa-clipboard-list fs-3"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">1. Eintragen</h3>
+                    <p class="fs-6 mb-3">Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann. Melde dich für das Fotoshooting an und sichere dir deinen exklusiven Gutschein!</p>
+                    <hr class="border-line">
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="icon-circle-md mb-3 bg-brand-light-gray">
+                        <i class="fa-solid fa-camera-retro fs-3"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">2. Shootingzeit</h3>
+                    <p class="fs-6 mb-3">Wir treffen uns zum Fotoshooting und nehmen uns Zeit für entspannte und authentische Momente. Ich sorge für eine lockere Atmosphäre, in der du dich wohlfühlst.</p>
+                    <hr class="border-line">
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="icon-circle-md mb-3 bg-brand-light-gray">
+                        <i class="fa-regular fa-images fs-3"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">3. Wähle dein Lieblingsbild/er aus</h3>
+                    <p class="fs-6 mb-3">Nach dem Shooting bekommst du eine Auswahl der besten Bilder und kannst in Ruhe deine Favoriten auswählen.</p>
+                    <hr class="border-line">
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="icon-circle-md mb-3 bg-brand-light-gray">
+                        <i class="fa-solid fa-gift fs-3"></i>
+                    </div>
+                    <h3 class="h5 fw-bold mb-3">4. Ergebnis</h3>
+                    <p class="fs-6 mb-3">Deine professionell bearbeiteten Bilder werden dir digital zur Verfügung gestellt – bereit zum Teilen und Genießen!</p>
+                    <hr class="border-line">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION #9: CREATIVE SHOWCASE-->
+
+    <section class="creative-showcase-section">
+        <!-- Background Image -->
+        <div class="creative-showcase-bg">
+            <img
+        src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=1600&h=900&fit=crop&q=80"
+        alt="Photography backdrop"
+        class="object-cover"
+        loading="lazy"
+      />
+        </div>
+
+        <!-- Content Overlay -->
+        <div class="container creative-showcase-content d-flex align-items-center justify-content-center px-3 px-lg-5">
+            <div class="text-center text-white">
+                <h2 class="display-4 fw-bold mb-4 text-white text-shadow-dark">Deine Momente, für immer festgehalten</h2>
+                <p class="fs-5 mb-4 text-white mx-auto mw-600 text-shadow-dark">
+                    Professionelle Fotografie, die Emotionen einfängt und Erinnerungen schafft, die ein Leben lang bleiben.
+                </p>
+                <a href="#contact" class="btn btn-primary px-5 py-3 fw-bold rounded-0">Jetzt Termin vereinbaren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION #10: FAQ ACCORDION -->
+    <section class="py-5 bg-brand-light">
+        <div class="container px-3 px-lg-5">
+            <!-- Heading -->
+            <h2 class="fs-3 fw-bold mb-4">Häufige Fragen zum Fotoshooting</h2>
+
+            <!-- FAQ Accordion -->
+            <div class="faq-accordion">
+                <!-- Question 1 -->
+                <div class="faq-item">
+                    <div class="faq-question d-flex justify-content-between align-items-center" role="button" tabindex="0">
+                        <span class="fs-5 fw-bold">Wie lange dauert ein Fotoshooting?</span>
+                        <span class="faq-icon fs-5 fw-bold">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <hr class="border-line mt-3 mb-3">
+                        <p class="fs-6">Ein Standard-Fotoshooting dauert in der Regel 60-90 Minuten. Für Familien-Shootings nehme ich mir gerne etwas mehr Zeit, damit alle entspannt sind.</p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="faq-item">
+                    <div class="faq-question d-flex justify-content-between align-items-center" role="button" tabindex="0">
+                        <span class="fs-5 fw-bold">Wo finden die Shootings statt?</span>
+                        <span class="faq-icon fs-5 fw-bold">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <hr class="border-line mt-3 mb-3">
+                        <p class="fs-6">Die Shootings finden wahlweise outdoor an schönen Locations oder in meinem Studio statt. Gemeinsam finden wir den perfekten Ort für dein Shooting.</p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="faq-item">
+                    <div class="faq-question d-flex justify-content-between align-items-center" role="button" tabindex="0">
+                        <span class="fs-5 fw-bold">Wie viele Bilder erhalte ich?</span>
+                        <span class="faq-icon fs-5 fw-bold">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <hr class="border-line mt-3 mb-3">
+                        <p class="fs-6">Du erhältst eine Auswahl von 20-30 professionell bearbeiteten Bildern in hoher Auflösung. Alle Bilder werden sorgfältig retuschiert und optimiert.</p>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="faq-item">
+                    <div class="faq-question d-flex justify-content-between align-items-center" role="button" tabindex="0">
+                        <span class="fs-5 fw-bold">Was soll ich zum Shooting mitbringen?</span>
+                        <span class="faq-icon fs-5 fw-bold">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <hr class="border-line mt-3 mb-3">
+                        <p class="fs-6">Bringe einfach gute Laune mit! Bei Bedarf helfe ich dir gerne bei der Outfit-Auswahl. Für Kinder können Lieblingsspielzeuge für entspannte Momente sorgen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

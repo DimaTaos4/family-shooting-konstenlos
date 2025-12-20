@@ -1,0 +1,86 @@
+/**
+ * ============================================
+ * CREATIVE SHOWCASE SECTION
+ * ============================================
+ *
+ * Description:
+ * Full-width section with background image and dark overlay.
+ * Content appears above the dimmed background image.
+ * Creates dramatic visual effect with text shadow.
+ *
+ * Dependencies:
+ * - Bootstrap 5.3.3 (d-flex, align-items-center, justify-content-center, text-white)
+ * - CSS variables for customization (brightness, min-height)
+ *
+ * HTML Structure:
+ * <section class="creative-showcase-section">
+ *   <div class="creative-showcase-bg">
+ *     <img src="..." alt="..." class="object-cover" />
+ *   </div>
+ *   <div class="container creative-showcase-content d-flex align-items-center justify-content-center">
+ *     <div class="text-center text-white">
+ *       <h2 class="text-shadow-dark">Title</h2>
+ *       <p class="text-shadow-dark">Description</p>
+ *     </div>
+ *   </div>
+ * </section>
+ *
+ * JavaScript:
+ * Not required
+ *
+ * BEM Naming:
+ * .creative-showcase-section   (block)
+ * .creative-showcase-bg        (element)
+ * .creative-showcase-content   (element)
+ *
+ * Customization:
+ * Override CSS variables to adjust appearance:
+ * --showcase-min-height, --showcase-brightness
+ */
+
+/* CSS Variables for Constructor Flexibility */
+:root {
+    --showcase-min-height: 656px;
+    --showcase-brightness: 0.4;
+}
+
+/* Creative Showcase Section */
+.creative-showcase-section {
+    position: relative;
+    min-height: var(--showcase-min-height);
+    overflow: hidden;
+}
+
+/* Background Image Layer */
+.creative-showcase-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.creative-showcase-bg img {
+    filter: brightness(var(--showcase-brightness));
+}
+
+/* Content Layer (above background) */
+.creative-showcase-content {
+    position: relative;
+    z-index: 2;
+    min-height: var(--showcase-min-height);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    :root {
+        --showcase-min-height: 500px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --showcase-min-height: 400px;
+    }
+}
