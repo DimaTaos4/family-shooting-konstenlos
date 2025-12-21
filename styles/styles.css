@@ -206,7 +206,9 @@ body {
     margin: 0 auto;
     text-align: center;
     max-width: 900px;
+
 }
+
 
 .section11-articles {
     display: flex;
@@ -226,7 +228,6 @@ body {
 .section11-article:hover {
     transform: translateY(-4px);
     border-radius: 10px;
-    padding: 2px;
 }
 
 .section11-article:nth-child(1) {
@@ -263,6 +264,8 @@ body {
     line-height: 27px;
     margin-top: 29px;
 }
+
+
 
 .section11-description {
     font-weight: 500;
