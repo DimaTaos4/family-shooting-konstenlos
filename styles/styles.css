@@ -203,7 +203,9 @@ body {
     font-weight: 700;
     font-size: 35px;
     line-height: 42px;
-    /* text-align: center; */
+    margin: 0 auto;
+    text-align: center;
+    max-width: 900px;
 }
 
 .section11-articles {
@@ -218,6 +220,13 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 500px;
+    transition: 0.3s ease;
+}
+
+.section11-article:hover {
+    transform: translateY(-4px);
+    border-radius: 10px;
+    padding: 2px;
 }
 
 .section11-article:nth-child(1) {
@@ -241,7 +250,11 @@ body {
     max-width: 500px;
     height: auto;
     object-fit: cover;
+    transition: 0.4s ease;
+}
 
+.section11-article img:hover {
+    border-radius: 10px;
 }
 
 .section11-untertitle {
@@ -257,7 +270,45 @@ body {
     line-height: 27px;
 }
 
+@media(max-width:1531px) {
+    .section11-article:nth-child(2) {
+        margin-top: 0;
+    }
 
+    .section11-article:nth-child(3) {
+        margin-top: 0;
+    }
+
+    .section11-article:nth-child(4) {
+        margin-top: 0;
+    }
+
+
+    .section11-article {
+        max-width: 440px;
+        transition: 0.3s ease;
+        text-align: center;
+    }
+
+    .section11-untertitle {
+        margin-top: 12px;
+        font-size: 20px;
+    }
+
+    .section11-article img {
+        max-width: 440px;
+    }
+
+    .section11-description {
+        font-size: 20px;
+    }
+
+    .section11-title {
+        font-size: 28px;
+    }
+
+
+}
 
 @media(max-width:1399px) {
     .hero-images-wrapper {
@@ -384,6 +435,17 @@ body {
     }
 }
 
+@media (max-width: 895px) {
+    .section11-articles {
+        gap: 30px;
+    }
+
+    .section11-article img {
+        max-width: 440px;
+        border-radius: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 40px;
@@ -409,6 +471,12 @@ body {
     .img-small {
         width: 190px;
         left: -40px;
+    }
+}
+
+@media (max-width: 574px) {
+    .section11-title {
+        font-size: 25px;
     }
 }
 
@@ -490,6 +558,33 @@ body {
         margin: 30px auto;
         padding: 28px 20px 20px 20px;
         max-width: 345px;
+    }
+
+    .section11-article {
+        max-width: 380px;
+    }
+
+    .section11-article img {
+        max-width: 380px;
+        max-height: 400px;
+    }
+
+    .section11-untertitle,
+    .section11-description {
+        font-size: 18px;
+    }
+
+    .section11-articles {
+        padding: 0 20px;
+    }
+
+    .section11-button-wrapper {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .section11-button-wrapper a {
+        font-size: 16px;
     }
 }
 
