@@ -361,6 +361,7 @@ body {
 
 .legal-privacy a:hover {
     transform: translateY(-3px);
+    text-decoration: underline;
 }
 
 @media(max-width:1670px) {
