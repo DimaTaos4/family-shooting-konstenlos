@@ -73,7 +73,7 @@
 .legal-privacy {
     padding: 20px 0;
     font-size: 14px;
-    margin-top: 4rem !important;
+    /* margin-top: 4rem !important; */
 }
 
 .legal-privacy a {
@@ -160,5 +160,11 @@
 
     .legal-privacy a {
         font-size: 18px;
+    }
+}
+
+@media (max-width:430px) {
+    .legal-privacy {
+        margin-top: 4rem !important;
     }
 }
