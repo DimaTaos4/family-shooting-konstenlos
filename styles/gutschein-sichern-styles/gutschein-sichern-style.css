@@ -1,0 +1,157 @@
+.gutschein-section {
+    background-color: var(--hintergrund-color);
+    padding: 80px 0;
+}
+
+/* ===== Layout ===== */
+.gut-section-infos {
+    display: flex;
+    gap: 120px;
+    align-items: flex-start;
+}
+
+/* ===== LEFT BLOCK ===== */
+.gutsch-left-block {
+    max-width: 600px;
+}
+
+.gutsch-left-block p:first-of-type {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--button-color);
+    margin-bottom: 12px;
+}
+
+.gutsch-left-block h6 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 16px;
+}
+
+.gutsch-left-block p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 28px;
+    color: #222;
+}
+
+/* ===== FORM ===== */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    max-width: 557px;
+}
+
+/* inputs + select */
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 16px 18px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--button-color);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/* checkbox */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.form-checkbox input {
+    width: 18px;
+    height: 18px;
+}
+
+/* submit */
+.btn-submit {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 32px;
+    padding: 18px 0;
+    background: var(--button-color);
+    border-radius: 14px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== RIGHT BLOCK ===== */
+.gutsch-right-block {
+    max-width: 420px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.gutsch-right-block img {
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.gutsch-right-block p:first-of-type {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.gutsch-right-block h5 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.gutsch-right-block p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+}
+
+.datenschutz {
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.datenschutz:hover {
+    color: var(--button-color);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+    .gut-section-infos {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .gutsch-right-block {
+        max-width: 100%;
+    }
+}
