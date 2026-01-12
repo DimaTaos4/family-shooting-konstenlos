@@ -203,6 +203,47 @@ body {
     color: var(--button-color);
 }
 
+/* CARD */
+.step-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 12px;
+    height: 100%;
+}
+
+/* HEADER: icon + title */
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* ICON */
+.icon-circle-md {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* TEXT */
+.step-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+/* LINE always bottom */
+.step-card hr {
+    margin-top: auto;
+}
+
 .section11 {
     background-color: var(--second-hintergrund-color);
     display: flex;
