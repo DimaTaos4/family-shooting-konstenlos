@@ -70,15 +70,21 @@
 
 }
 
+
 /* form-group с select */
 .form-group:has(select) {
     position: relative;
+    font-weight: 500;
 }
 
 /* select */
 .form-group select {
     padding-right: 48px;
     cursor: pointer;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000;
 }
 
 /* стрелка ТОЛЬКО у select */
@@ -224,6 +230,22 @@
     }
 
     .gutsch-left-block p {
+        font-size: 18px;
+    }
+
+    .gutsch-right-block p:first-of-type {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .gutsch-right-block h5 {
+        font-size: 22px;
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    .gutsch-right-block p {
         font-size: 18px;
     }
 
