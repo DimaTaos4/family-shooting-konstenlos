@@ -49,22 +49,68 @@
 }
 
 /* inputs + select */
-.form-group input,
+/* inputs + select (ТОЛЬКО текстовые поля) */
+.form-group input:not([type="checkbox"]),
 .form-group select {
     width: 100%;
-    padding: 16px 18px;
+    height: 58px;
+    padding: 0 18px;
     font-size: 18px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    font-weight: 400;
+    color: #000;
+
+    border: 1px solid #000;
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.25s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
 }
+
+/* form-group с select */
+.form-group:has(select) {
+    position: relative;
+}
+
+/* select */
+.form-group select {
+    padding-right: 48px;
+    cursor: pointer;
+}
+
+/* стрелка ТОЛЬКО у select */
+.form-group:has(select)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 8px;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    pointer-events: none;
+}
+
 
 .form-group input:focus,
 .form-group select:focus {
     outline: none;
     border-color: var(--button-color);
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+.form-group input::placeholder {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
 }
 
 /* checkbox */
@@ -79,6 +125,7 @@
 .form-checkbox input {
     width: 18px;
     height: 18px;
+    accent-color: var(--button-color);
 }
 
 /* submit */
@@ -88,7 +135,6 @@
     margin-top: 32px;
     padding: 18px 0;
     background: var(--button-color);
-    border-radius: 14px;
     border: none;
     color: #fff;
     font-size: 20px;
@@ -104,35 +150,40 @@
 
 /* ===== RIGHT BLOCK ===== */
 .gutsch-right-block {
-    max-width: 420px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    max-width: 549px;
+    padding: 0;
+    background: none;
+    box-shadow: none;
 }
+
 
 .gutsch-right-block img {
     width: 100%;
-    border-radius: 16px;
-    margin-bottom: 20px;
+    max-width: 549px;
+    height: 437px;
+    object-fit: cover;
+    margin-bottom: 28px;
 }
 
 .gutsch-right-block p:first-of-type {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
 }
 
 .gutsch-right-block h5 {
     font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 34px;
+    margin-top: 19px;
+    margin-bottom: 24px;
 }
 
 .gutsch-right-block p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #333;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
 }
 
 .datenschutz {
@@ -163,5 +214,34 @@
         width: 70%;
         border-radius: 16px;
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gutsch-left-block h6 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .gutsch-left-block p {
+        font-size: 18px;
+    }
+
+    .form-group input:not([type="checkbox"]),
+    .form-group select {
+        height: 56px;
+        font-size: 16px;
+    }
+
+    .form-group input::placeholder {
+        font-size: 16px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin-top: 26px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
     }
 }
